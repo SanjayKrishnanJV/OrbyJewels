@@ -185,7 +185,15 @@ export function Footer() {
               &copy; <span suppressHydrationWarning>{new Date().getFullYear()}</span> Orby Jewels. All rights reserved. Part of Nera Groups.
             </p>
             <p className="text-chocolate-500 text-xs flex items-center gap-1">
-              Designed with <span className="text-red-400">♥</span> by Sanjay Krishnan JV
+              Designed with <span className="text-red-400">♥</span> by{" "}
+              <a
+                href="https://sanjaykrishnanjv.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gold-400 hover:text-gold-300 transition-colors"
+              >
+                Sanjay Krishnan JV
+              </a>
             </p>
             <div className="flex items-center gap-4 text-chocolate-500 text-xs">
               <span>Secured by SSL</span>
