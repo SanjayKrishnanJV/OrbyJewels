@@ -142,8 +142,8 @@ export function Footer() {
               <div className="flex gap-3">
                 <Phone size={15} className="text-gold-400 flex-shrink-0 mt-0.5" />
                 <div>
-                  <a href="tel:+919876543210" className="text-champagne-300 text-sm hover:text-gold-400 transition-colors block">
-                    +91 98765 43210
+                  <a href="tel:+918547858420" className="text-champagne-300 text-sm hover:text-gold-400 transition-colors block">
+                    +91 85478 58420
                   </a>
                   <p className="text-chocolate-400 text-xs mt-0.5">Mon–Sat, 10am–7pm</p>
                 </div>
@@ -157,8 +157,7 @@ export function Footer() {
               <div className="flex gap-3">
                 <MapPin size={15} className="text-gold-400 flex-shrink-0 mt-0.5" />
                 <p className="text-champagne-300 text-sm leading-relaxed">
-                  123, Luxury Lane,<br />
-                  Bandra West, Mumbai — 400050
+                  Orby Jewels, Mannarkkad
                 </p>
               </div>
             </div>
@@ -185,12 +184,13 @@ export function Footer() {
             <p className="text-chocolate-400 text-xs text-center md:text-left">
               &copy; <span suppressHydrationWarning>{new Date().getFullYear()}</span> Orby Jewels. All rights reserved. Part of Nera Groups.
             </p>
+            <p className="text-chocolate-500 text-xs flex items-center gap-1">
+              Designed with <span className="text-red-400">♥</span> by Sanjay Krishnan JV
+            </p>
             <div className="flex items-center gap-4 text-chocolate-500 text-xs">
               <span>Secured by SSL</span>
               <span>|</span>
               <span>Made in India</span>
-              <span>|</span>
-              <span>CIN: U12345MH2024</span>
             </div>
           </div>
         </div>

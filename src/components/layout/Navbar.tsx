@@ -311,7 +311,7 @@ export function Navbar() {
 
               {/* WhatsApp */}
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/918547858420"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hidden md:flex p-2.5 text-chocolate-800 hover:text-green-600 transition-colors duration-200"
@@ -462,9 +462,9 @@ export function Navbar() {
 
               <div className="p-4 bg-champagne-100">
                 <p className="text-xs text-nude-500 mb-1">Need help?</p>
-                <a href="tel:+919876543210" className="flex items-center gap-2 text-sm text-chocolate-950 font-medium">
+                <a href="tel:+918547858420" className="flex items-center gap-2 text-sm text-chocolate-950 font-medium">
                   <Phone size={14} />
-                  +91 98765 43210
+                  +91 85478 58420
                 </a>
               </div>
             </motion.div>
