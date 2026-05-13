@@ -3,6 +3,7 @@ import { Playfair_Display, Poppins, Cormorant_Garamond, Inter } from "next/font/
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import { Providers } from "@/components/common/Providers";
+import { Analytics } from "@vercel/analytics/next";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -125,6 +126,7 @@ export default function RootLayout({
             }}
           />
         </Providers>
+        <Analytics />
       </body>
     </html>
   );
