@@ -1,0 +1,245 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 99%;
+    --foreground: 20 14% 15%;
+    --card: 40 30% 98%;
+    --card-foreground: 20 14% 15%;
+    --popover: 40 30% 98%;
+    --popover-foreground: 20 14% 15%;
+    --primary: 25 50% 18%;
+    --primary-foreground: 40 33% 97%;
+    --secondary: 35 40% 88%;
+    --secondary-foreground: 25 50% 18%;
+    --muted: 35 25% 92%;
+    --muted-foreground: 25 20% 45%;
+    --accent: 42 72% 52%;
+    --accent-foreground: 25 50% 15%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 35 25% 85%;
+    --input: 35 25% 85%;
+    --ring: 42 72% 52%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 25 20% 8%;
+    --foreground: 40 30% 92%;
+    --card: 25 18% 12%;
+    --card-foreground: 40 30% 92%;
+    --popover: 25 18% 12%;
+    --popover-foreground: 40 30% 92%;
+    --primary: 42 72% 52%;
+    --primary-foreground: 25 20% 8%;
+    --secondary: 25 18% 18%;
+    --secondary-foreground: 40 30% 92%;
+    --muted: 25 15% 18%;
+    --muted-foreground: 35 20% 60%;
+    --accent: 42 72% 52%;
+    --accent-foreground: 25 20% 8%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 25 15% 22%;
+    --input: 25 15% 22%;
+    --ring: 42 72% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-background text-foreground font-poppins;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+@layer components {
+  /* Luxury Button */
+  .btn-luxury {
+    @apply relative inline-flex items-center justify-center gap-2 px-8 py-4 text-sm font-medium tracking-widest uppercase transition-all duration-500 overflow-hidden;
+  }
+
+  .btn-luxury-primary {
+    @apply btn-luxury bg-chocolate-950 text-champagne-100 hover:bg-chocolate-800;
+  }
+
+  .btn-luxury-outline {
+    @apply btn-luxury border border-chocolate-950 text-chocolate-950 hover:bg-chocolate-950 hover:text-champagne-100;
+  }
+
+  .btn-luxury-gold {
+    @apply btn-luxury bg-gold-gradient text-white hover:opacity-90;
+  }
+
+  /* Gold divider */
+  .divider-gold {
+    @apply flex items-center gap-4;
+  }
+
+  .divider-gold::before,
+  .divider-gold::after {
+    content: '';
+    @apply flex-1 h-px bg-gold-500;
+  }
+
+  /* Luxury card */
+  .card-luxury {
+    @apply bg-white rounded-lg shadow-luxury-sm border border-nude-200/50 overflow-hidden transition-all duration-500 hover:shadow-card-hover;
+  }
+
+  /* Section headers */
+  .section-header {
+    @apply text-center mb-16;
+  }
+
+  .section-label {
+    @apply text-xs font-medium tracking-[0.3em] uppercase text-gold-600 mb-3 block;
+  }
+
+  .section-title {
+    @apply font-playfair text-3xl md:text-5xl text-chocolate-950 mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-nude-700 max-w-xl mx-auto leading-relaxed;
+  }
+
+  /* Shimmer loader */
+  .shimmer {
+    background: linear-gradient(90deg, #f0e6d8 25%, #e8d5c4 50%, #f0e6d8 75%);
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite linear;
+  }
+
+  /* Luxury input */
+  .input-luxury {
+    @apply w-full px-4 py-3 bg-white border border-nude-200 rounded-sm text-chocolate-950 placeholder:text-nude-400 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-all duration-300 font-poppins text-sm;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-champagne-100;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-nude-400 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-nude-600;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gold-text {
+    background: linear-gradient(135deg, #D4AF37, #B8860B, #D4AF37);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .luxury-shadow {
+    box-shadow: 0 20px 60px -15px rgba(61, 35, 20, 0.3);
+  }
+
+  .glass {
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background: rgba(253, 250, 247, 0.8);
+  }
+
+  .glass-dark {
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background: rgba(61, 35, 20, 0.7);
+  }
+}
+
+/* Custom product image zoom */
+.product-image-wrapper {
+  overflow: hidden;
+}
+
+.product-image-wrapper img {
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.product-image-wrapper:hover img {
+  transform: scale(1.08);
+}
+
+/* Page transitions */
+.page-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.4s ease-out;
+}
+
+/* Quantity selector */
+.qty-btn {
+  @apply w-8 h-8 flex items-center justify-center border border-nude-200 text-chocolate-950 hover:bg-chocolate-950 hover:text-white hover:border-chocolate-950 transition-all duration-200 text-sm;
+}
+
+/* Toast overrides */
+.hot-toast-custom {
+  @apply font-poppins text-sm;
+}
+
+/* Range slider */
+input[type="range"] {
+  accent-color: #B8860B;
+}
+
+/* Loading bar */
+.loading-bar {
+  height: 2px;
+  background: linear-gradient(90deg, #D4AF37, #B8860B);
+  animation: loading-bar 1.5s ease-in-out infinite;
+}
+
+@keyframes loading-bar {
+  0% { width: 0%; margin-left: 0%; }
+  50% { width: 60%; margin-left: 20%; }
+  100% { width: 0%; margin-left: 100%; }
+}
+
+/* Star rating */
+.star-filled {
+  color: #D4AF37;
+}
+
+.star-empty {
+  color: #e0d5c8;
+}
